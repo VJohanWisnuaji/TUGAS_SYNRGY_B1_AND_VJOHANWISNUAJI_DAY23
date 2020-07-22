@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.text.SpannableStringBuilder
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.bold
@@ -105,32 +106,86 @@ class MainActivity : AppCompatActivity() {
 // Click hear and Double Tap image to like
 
         iv_feed_love.setOnClickListener {
-            iv_feed_love.setImageResource(R.drawable.ic_baseline_favorite_24)
+            Log.d( "Binar", iv_feed_love.tag.toString())
+
+            if (iv_feed_love.tag.toString() == "notLoved")
+                {
+                    iv_feed_love.setImageResource(R.drawable.ic_baseline_favorite_24)
+                    iv_feed_love.tag = "loved"}
+            else {
+                iv_feed_love.setImageResource(R.drawable.ic_outline_love)
+                iv_feed_love.tag = "notLoved"
+            }
         }
 
         iv_feed_love2.setOnClickListener {
-            iv_feed_love2.setImageResource(R.drawable.ic_baseline_favorite_24)
+            Log.d( "Binar", iv_feed_love2.tag.toString())
+
+            if (iv_feed_love2.tag.toString() == "notLoved")
+            {
+                iv_feed_love2.setImageResource(R.drawable.ic_baseline_favorite_24)
+                iv_feed_love2.tag = "loved"}
+            else {
+                iv_feed_love2.setImageResource(R.drawable.ic_outline_love)
+                iv_feed_love2.tag = "notLoved"
+            }
         }
 
         iv_feed_love3.setOnClickListener {
-            iv_feed_love3.setImageResource(R.drawable.ic_baseline_favorite_24)
+            Log.d( "Binar", iv_feed_love3.tag.toString())
+
+            if (iv_feed_love3.tag.toString() == "notLoved")
+            {
+                iv_feed_love3.setImageResource(R.drawable.ic_baseline_favorite_24)
+                iv_feed_love3.tag = "loved"}
+            else {
+                iv_feed_love3.setImageResource(R.drawable.ic_outline_love)
+                iv_feed_love3.tag = "notLoved"
+            }
         }
 
         iv_feed.setOnClickListener(object : DoubleClickListener() {
             override fun onDoubleClick(v: View) {
-                iv_feed_love.setImageResource(R.drawable.ic_baseline_favorite_24)
+                Log.d( "Binar", iv_feed_love.tag.toString())
+
+                if (iv_feed_love.tag.toString() == "notLoved")
+                {
+                    iv_feed_love.setImageResource(R.drawable.ic_baseline_favorite_24)
+                    iv_feed_love.tag = "loved"}
+                else {
+                    iv_feed_love.setImageResource(R.drawable.ic_outline_love)
+                    iv_feed_love.tag = "notLoved"
+                }
             }
         })
 
         iv_feed2.setOnClickListener(object : DoubleClickListener() {
             override fun onDoubleClick(v: View) {
-                iv_feed_love2.setImageResource(R.drawable.ic_baseline_favorite_24)
+                Log.d( "Binar", iv_feed_love2.tag.toString())
+
+                if (iv_feed_love2.tag.toString() == "notLoved")
+                {
+                    iv_feed_love2.setImageResource(R.drawable.ic_baseline_favorite_24)
+                    iv_feed_love2.tag = "loved"}
+                else {
+                    iv_feed_love2.setImageResource(R.drawable.ic_outline_love)
+                    iv_feed_love2.tag = "notLoved"
+                }
             }
         })
 
         iv_feed3.setOnClickListener(object : DoubleClickListener() {
             override fun onDoubleClick(v: View) {
-                iv_feed_love3.setImageResource(R.drawable.ic_baseline_favorite_24)
+                Log.d( "Binar", iv_feed_love3.tag.toString())
+
+                if (iv_feed_love3.tag.toString() == "notLoved")
+                {
+                    iv_feed_love3.setImageResource(R.drawable.ic_baseline_favorite_24)
+                    iv_feed_love3.tag = "loved"}
+                else {
+                    iv_feed_love3.setImageResource(R.drawable.ic_outline_love)
+                    iv_feed_love3.tag = "notLoved"
+                }
             }
         })
     }
